@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jamaica Christine ✿</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Caveat:wght@400;700&family=DM+Sans:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!--PUZZLE OVERLAY-->
+<div id="puzzle-overlay">
+  <div class="puzzle-title">✨ Solve the Puzzle First! 🧩</div>
+  <div class="puzzle-sub">Complete the picture to unlock Jamaica's profile 🌸</div>
+
+  <div id="puzzle-area">
+    <div class="puzzle-boards">
+      <div>
+        <div class="board-label">🎲 Pieces — drag from here</div>
+        <div id="pieces-tray"></div>
+      </div>
+      <div>
+        <div class="board-label green">🧩 Drop pieces here!</div>
+        <div id="puzzle-board"></div>
+      </div>
+    </div>
+    <div class="puzzle-progress-wrap">
+      <div class="puzzle-progress-bar" id="progress-bar"></div>
+    </div>
+    <div class="puzzle-sub" id="progress-text">0 / 9 pieces placed</div>
+  </div>
+
+  <div id="win-screen">
+    <div style="font-size:3rem;">🎉</div>
+    <div class="win-title">You solved it!!</div>
+    <div class="win-sub">Jamaica's profile is now unlocked 🌸💕</div>
+    <button id="enter-btn" onclick="revealProfile()">Enter her space ✨</button>
+  </div>
+</div>
+
+<div class="page">
+
+  <!--Header-->
+  <section class="blob-section blob-hero bg-gradient-pg z2 hero reveal" style="text-align:center; padding:62px 50px 72px;">
+    <span class="deco lg" style="top:-10px; left:6%;">🌸</span>
+    <span class="deco lg" style="top:5%;   right:5%;">✨</span>
+    <span class="deco"    style="bottom:8%;  left:4%;">🦋</span>
+    <span class="deco"    style="bottom:12%; right:4%;">🍓</span>
+    <span class="deco sm" style="top:40%;  left:2%;">💕</span>
+    <span class="deco sm" style="top:30%;  right:2%;">🌿</span>
+    <span class="deco sm" style="top:15%;  left:20%;">🎀</span>
+    <span class="deco sm" style="bottom:22%;right:18%;">⭐</span>
+    <span class="deco sm" style="top:60%;  right:10%;">🧁</span>
+    <span class="deco sm" style="top:18%;  left:44%;">🌼</span>
+    <span class="deco sm" style="bottom:30%;left:30%;">🍒</span>
+    <span class="deco sm" style="top:25%;  right:22%;">🫧</span>
+
+    <div style="display:inline-block; background:var(--pink); color:#fff; font-family:var(--font-hand); font-size:1rem; padding:3px 20px; border-radius:30px; margin-bottom:14px;">✿ A glimpse of who I am ✿</div>
+    <div style="font-family:var(--font-display); font-size:clamp(2.6rem,7.5vw,5.4rem); line-height:1; background:linear-gradient(135deg,var(--pink) 30%,var(--green)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;">Jamaica Christine</div>
+    <div style="font-family:var(--font-hand); font-size:1.75rem; color:var(--pink); margin-top:2px;">~ Montoya Padali ~</div>
+    <p style="max-width:500px; margin:14px auto 0; font-size:.88rem; line-height:1.72; color:#666; font-style:italic;">"Someone expressive and thoughtful, a little dramatic in a playful way, creative, curious about life, and still figuring things out while trying to grow."</p>
+    <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:8px; margin-top:18px;">
+      <span class="badge">🎂 October</span>
+      <span class="badge">📍 Quezon City</span>
+      <span class="badge green">♎ Libra</span>
+      <span class="badge green">🧠 INTJ</span>
+      <span class="badge">🎓 2nd Year BSIT</span>
+      <span class="badge green">🏫 QCU</span>
+    </div>
+    <div class="tag-row" style="justify-content:center; margin-top:12px;">
+      <span class="sticky">she/her 🌸</span>
+      <span class="sticky green">creative 🎨</span>
+      <span class="sticky yellow">curious ✨</span>
+      <span class="sticky">still growing 🌱</span>
+      <span class="sticky green">dreamer 💭</span>
+    </div>
+  </section>
+
+  <!--ABOUT ME + POLAROID PHOTOS-->
+  <div class="about-wrap reveal">
+
+    <div class="blob-section blob-about bg-pink-soft z2 about-blob">
+      <span class="deco sm" style="top:14px; right:20px; opacity:.55;">🌸</span>
+      <span class="deco sm" style="bottom:18px; left:14px; opacity:.5;">💕</span>
+      <span class="deco sm" style="top:55%; right:12px; opacity:.4;">🎀</span>
+
+      <div class="sec-label"><span class="num">01</span> Info About Me</div>
+      <h2 class="sec-title">About Me 🩷</h2>
+      <div class="sec-divider"></div>
+
+      <div class="info-box">
+        <div class="info-row"><span class="key">Full Name</span><span>Jamaica Christine M. Padali</span></div>
+        <div class="info-row"><span class="key">Birthday</span><span>🎂 October 2005</span></div>
+        <div class="info-row"><span class="key">City</span><span>📍 District II, Quezon City</span></div>
+        <div class="info-row"><span class="key">Star Sign</span><span>♎ Libra</span></div>
+        <div class="info-row"><span class="key">MBTI</span><span>🧠 INTJ — The Architect</span></div>
+        <div class="info-row"><span class="key">School</span><span>🏫 Quezon City University</span></div>
+        <div class="info-row"><span class="key">Course</span><span>💻 Bachelor of Science in Information Technology — 2nd Year</span></div>
+      </div>
+
+      <div class="tag-row" style="margin-top:16px;">
+        <span class="fact-bubble">✏️ loves to sketch</span>
+        <span class="fact-bubble green">📚 avid reader</span>
+        <span class="fact-bubble">🎵 music = therapy</span>
+        <span class="fact-bubble green">🎬 movie nights 🌙</span>
+      </div>
+    </div>
+
+    <div class="blob-section blob-photo bg-green-soft z1 photo-blob">
+      <span class="deco sm" style="top:-6px;  right:-4px; opacity:.6;">🌸</span>
+      <span class="deco sm" style="bottom:14px; left:-6px; opacity:.5;">✨</span>
+      <span class="deco sm" style="top:44%; left:50%; opacity:.45; transform:translateX(-50%);">🎀</span>
+
+      <div class="photo-stack">
+        <div class="polaroid">
+          <div class="photo-area">
+            <img src="Content/child-me.jpg" alt="Child Me" onerror="this.style.display='none'">
+            <span class="icon">👶</span>
+            <span class="ph-label">Child Me</span>
+            <small>child-me.jpg</small>
+          </div>
+          <div class="caption">little me ✨</div>
+        </div>
+        <div class="polaroid green">
+          <div class="photo-area">
+            <img src="Content/child-me-2.jpg" alt="Grown Me" onerror="this.style.display='none'">
+            <span class="icon">🌸</span>
+            <span class="ph-label">Me Again</span>
+            <small><child-me-2></child-me-2>.jpg</small>
+          </div>
+          <div class="caption">Me Again 🌸</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- EXPERIENCE-->
+  <section class="blob-section blob-exp bg-gradient-gg z3 reveal">
+    <span class="deco"    style="top:16px;  right:32px;  opacity:.45;">🎀</span>
+    <span class="deco"    style="bottom:20px; right:50px; opacity:.4;">🦋</span>
+    <span class="deco sm" style="top:52%;   left:14px;   opacity:.35;">🍀</span>
+    <span class="deco sm" style="bottom:12px; left:28%;  opacity:.35;">🌿</span>
+    <span class="deco sm" style="top:20px;  left:48%;    opacity:.3;">🌼</span>
+    <span class="deco sm" style="bottom:40px; right:18%; opacity:.3;">⭐</span>
+
+    <div class="sec-label green"><span class="num">02</span> Experience</div>
+    <h2 class="sec-title">Experience 🌿</h2>
+    <div class="sec-divider green"></div>
+
+    <div class="tab-row">
+      <button class="tab-btn active" onclick="switchTab('student', this)">📚 As a Student</button>
+      <button class="tab-btn green"  onclick="switchTab('person',  this)">🌸 As a Person</button>
+    </div>
+
+    <div class="tab-panel active" id="panel-student">
+      <div class="exp-body">
+        <div class="badge-row">
+          <span class="badge filled">📅 2024 – 2026</span>
+          <span class="badge filled">🏫 Quezon City University</span>
+          <span class="badge filled">💻 BSIT — 2nd Year</span>
+        </div>
+        <p>From 2024 to 2026, my experience as a student has been more than just attending classes and completing requirements. It has been a meaningful journey of growth, self-discovery, and learning how to navigate challenges. Each lecture, assignment, and project has not only broadened my knowledge but also taught me valuable lessons about discipline, time management, and curiosity. Along the way, my classmates have been an important part of this journey. From patiently explaining difficult concepts during study sessions to sharing tips on managing heavy workloads, their support has made even the most challenging topics feel achievable. Working together on group projects taught me how to listen actively, value different perspectives, and celebrate small victories as a team, making learning more collaborative and meaningful.</p>
+        <p>There have been moments that tested my patience, focus, and determination, but those challenges also pushed me to develop resilience, perseverance, and a stronger sense of motivation. Whenever I felt overwhelmed or unsure about an assignment, my classmates would offer encouragement, share their strategies, or simply remind me that I wasn’t alone. Sometimes, it was their laughter during stressful moments or their willingness to stay up late for group work that helped me keep going. Each obstacle I overcame, often with their guidance or support, became a stepping stone toward confidence and growth. This journey continues to shape who I am, not only as a student striving for academic success but also as an individual learning the value of collaboration, empathy, and the power of supportive friendships.</p>
+        <div class="value-chips">
+          <span class="chip">🌱 Stay Curious</span>
+          <span class="chip">🚀 Keep Growing</span>
+          <span class="chip">💚 Be Genuine</span>
+        </div>
+        <div class="tag-row" style="margin-top:12px;">
+          <span class="sticky">late night studying 🌙</span>
+          <span class="sticky green">group projects 💻</span>
+          <span class="sticky yellow">deadlines 😅</span>
+          <span class="sticky">coffee runs ☕</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-panel" id="panel-person">
+      <div class="exp-body">
+        <div class="badge-row">
+        <span class="badge filled green">🌸 Who I Am</span>
+        <span class="badge filled green">💕 Beyond School</span>
+      </div>
+        <p>As a person, my life has been a continuous journey of learning, growth, and self-discovery. Every experience, whether a success, challenge, or quiet moment of reflection, has shaped my perspective and influenced the way I understand the world around me. I have come to see life not as a fixed path but as an ongoing process, where each lesson, big or small, offers an opportunity to grow, adapt, and become more aware of myself. The people I meet, the experiences I have, and the passions I explore all contribute to the evolving mosaic of who I am, teaching me resilience, empathy, and the importance of staying curious.</p>
+        <p>My journey as a person is still unfolding, and I embrace each new experience as a chance to learn and expand my horizons. Every challenge I face, every connection I form, and every passion I pursue adds depth to my understanding of myself and the world I inhabit. I strive to approach life with openness, gratitude, and a willingness to evolve, recognizing that growth is not a destination but a continuous adventure. With every step, I discover more about who I am, who I want to become, and the impact I hope to make on the world around me.</p>
+        <div class="tag-row" style="margin-top:14px;">
+        <span class="fact-bubble">💌 loves meaningful convos</span>
+        <span class="fact-bubble green">🎨 creative at heart</span>
+        <span class="fact-bubble">🌙 night owl</span>
+        <span class="fact-bubble green">🫶 values real connections</span>
+        <span class="fact-bubble">🍓 snack lover</span>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <!--SKILLS-->
+  <section class="blob-section blob-skills bg-pink-pale z4 reveal">
+    <span class="deco"    style="top:18px;  right:28px;  opacity:.45;">🎨</span>
+    <span class="deco"    style="bottom:18px; left:18px; opacity:.4;">✏️</span>
+    <span class="deco sm" style="top:48%;   right:16px;  opacity:.35;">⭐</span>
+    <span class="deco sm" style="top:22px;  left:55%;    opacity:.3;">🖌️</span>
+
+    <div class="sec-label"><span class="num">03</span> Skills</div>
+    <h2 class="sec-title">Skills 🎨</h2>
+    <div class="sec-divider"></div>
+
+    <div class="skill-header">
+      <span style="font-size:.92rem; font-weight:700;">✏️ Sketching &amp; Drawing</span>
+      <span class="skill-level">🌱 Beginner but Passionate!</span>
+    </div>
+
+    <div class="gallery-grid">
+      <div class="gallery-item"><img src="Content/artwork-1.jpg" alt="Artwork 1" onerror="this.style.display='none'"><span class="icon">🖼️</span><span>artwork-1.jpg</span></div>
+      <div class="gallery-item"><img src="Content/artwork-2.jpg" alt="Artwork 2" onerror="this.style.display='none'"><span class="icon">🖼️</span><span>artwork-2.jpg</span></div>
+      <div class="gallery-item"><img src="Content/artwork-3.jpg" alt="Artwork 3" onerror="this.style.display='none'"><span class="icon">🖼️</span><span>artwork-3.jpg</span></div>
+      <div class="gallery-item"><img src="Content/artwork-4.jpg" alt="Artwork 4" onerror="this.style.display='none'"><span class="icon">🖼️</span><span>artwork-4.jpg</span></div>
+      <div class="gallery-item"><img src="Content/artwork-5.jpg" alt="Artwork 5" onerror="this.style.display='none'"><span class="icon">🖼️</span><span>artwork-5.jpg</span></div>
+    </div>
+
+    <div class="tag-row" style="margin-top:16px;">
+      <span class="sticky yellow">still learning 🖊️</span>
+      <span class="sticky">character sketches ✍️</span>
+      <span class="sticky green">doodle lover 🌿</span>
+      <span class="sticky">inspired by everything 🌸</span>
+    </div>
+  </section>
+
+  <!--HOBBIES-->
+  <section class="blob-section blob-hobbies bg-gradient-gp z3 reveal">
+    <span class="deco"    style="top:16px;  right:38px;  opacity:.45;">🎵</span>
+    <span class="deco"    style="bottom:22px; left:22px; opacity:.4;">📖</span>
+    <span class="deco sm" style="top:50%;   left:18px;   opacity:.35;">🎬</span>
+    <span class="deco sm" style="top:20px;  left:43%;    opacity:.3;">🍓</span>
+    <span class="deco sm" style="bottom:32px; right:22%; opacity:.3;">🌸</span>
+    <span class="deco sm" style="top:35%;   right:10px;  opacity:.3;">🎶</span>
+
+    <div class="sec-label"><span class="num">04</span> Hobbies</div>
+    <h2 class="sec-title">Hobbies 🌸</h2>
+    <div class="sec-divider"></div>
+
+    <div class="hobby-grid">
+      <div class="hobby-card">
+        <span class="hobby-icon">📚</span>
+        <div class="hobby-name">Reading Books</div>
+        <div class="hobby-desc">Any &amp; everything — all genres!</div>
+        <div class="hobby-photos">
+          <div class="hobby-ph"><img src="Content/book-1.jpg" alt="Book 1" onerror="this.style.display='none'">📖<br>book-1.jpg</div>
+          <div class="hobby-ph"><img src="Content/book-2.jpg" alt="Book 2" onerror="this.style.display='none'">📖<br>book-2.jpg</div>
+          <div class="hobby-ph"><img src="Content/book-3.jpg" alt="Book 3" onerror="this.style.display='none'">📖<br>book-3.jpg</div>
+          <div class="hobby-ph"><img src="Content/book-4.jpg" alt="Book 4" onerror="this.style.display='none'">📖<br>book-4.jpg</div>
+        </div>
+      </div>
+      <div class="hobby-card">
+        <span class="hobby-icon">🎵</span>
+        <div class="hobby-name">Music</div>
+        <div class="hobby-desc">OPM · K-pop · Pop · R&amp;B</div>
+        <div class="hobby-photos">
+          <div class="hobby-ph"><img src="Content/album-1.jpg" alt="Album 1" onerror="this.style.display='none'">🎶<br>album-1.jpg</div>
+          <div class="hobby-ph"><img src="Content/album-2.jpg" alt="Album 2" onerror="this.style.display='none'">🎶<br>album-2.jpg</div>
+          <div class="hobby-ph"><img src="Content/album-3.png" alt="Album 3" onerror="this.style.display='none'">🎶<br>album-3.png</div>
+          <div class="hobby-ph"><img src="Content/album-4.jpg" alt="Album 4" onerror="this.style.display='none'">🎶<br>album-4.jpg</div>
+        </div>
+      </div>
+      <div class="hobby-card">
+        <span class="hobby-icon">🎬</span>
+        <div class="hobby-name">Movies &amp; Shows</div>
+        <div class="hobby-desc">Thriller · K-drama · Romance · Action</div>
+        <div class="hobby-photos">
+          <div class="hobby-ph" style="background:var(--pink-pale);border-color:var(--pink-mid);color:var(--pink);"><img src="Content/movie-1.jpg" alt="Movie 1" onerror="this.style.display='none'">🎥<br>movie-1.jpg</div>
+          <div class="hobby-ph" style="background:var(--pink-pale);border-color:var(--pink-mid);color:var(--pink);"><img src="Content/movie-2.jpg" alt="Movie 2" onerror="this.style.display='none'">🎥<br>movie-2.jpg</div>
+          <div class="hobby-ph" style="background:var(--pink-pale);border-color:var(--pink-mid);color:var(--pink);"><img src="Content/movie-3.jpg" alt="Movie 3" onerror="this.style.display='none'">🎥<br>movie-3.jpg</div>
+          <div class="hobby-ph" style="background:var(--pink-pale);border-color:var(--pink-mid);color:var(--pink);"><img src="Content/movie-4.jpg" alt="Movie 4" onerror="this.style.display='none'">🎥<br>movie-4.jpg</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--WHAT DRIVES ME-->
+  <section class="blob-section blob-drives bg-pink-soft z4 reveal">
+    <span class="deco"    style="top:18px;  right:30px;  opacity:.45;">💫</span>
+    <span class="deco"    style="bottom:24px; left:20px; opacity:.4;">🌱</span>
+    <span class="deco sm" style="top:48%;   right:14px;  opacity:.35;">✨</span>
+    <span class="deco sm" style="top:24px;  left:33%;    opacity:.3;">🦋</span>
+    <span class="deco sm" style="bottom:36px; right:40%; opacity:.3;">🌸</span>
+
+    <div class="sec-label"><span class="num">05</span> What Drives Me</div>
+    <h2 class="sec-title">What Drives Me 💫</h2>
+    <div class="sec-divider"></div>
+
+    <div class="drives-grid">
+      <div>
+        <p class="drives-text">I'm driven by curiosity and the desire to grow as a person. The things that inspire me art, stories, music, and meaningful moments remind me to keep exploring and creating. I want to keep learning, improving, and becoming the best version of myself.</p>
+        <div class="tag-row" style="margin-top:16px;">
+          <span class="fact-bubble">🎨 art inspires me</span>
+          <span class="fact-bubble green">📖 stories move me</span>
+          <span class="fact-bubble">🎵 music heals me</span>
+          <span class="fact-bubble green">🌱 growth drives me</span>
+        </div>
+      </div>
+      <div class="drives-photo-wrap">
+        <div class="photo-ph">
+          <img src="Content/inspiration.gif" alt="My Inspiration" onerror="this.style.display='none'">
+          <span class="icon">🌟</span>
+          <span><inspiration class="gif"></inspiration></span>
+          <small>add your photo here</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--VISION BOARD-->
+  <section class="blob-section blob-vision bg-gradient-pg z3 reveal">
+    <span class="deco"    style="top:18px;  right:34px;  opacity:.45;">🌟</span>
+    <span class="deco"    style="bottom:22px; left:18px; opacity:.4;">🎯</span>
+    <span class="deco sm" style="top:53%;   right:16px;  opacity:.35;">💕</span>
+    <span class="deco sm" style="top:22px;  left:40%;    opacity:.3;">✈️</span>
+    <span class="deco sm" style="top:38%;   left:10px;   opacity:.3;">🎓</span>
+    <span class="deco sm" style="bottom:36px; right:26%; opacity:.3;">🌸</span>
+
+    <div class="sec-label green"><span class="num">06</span> Vision Board</div>
+    <h2 class="sec-title">My Goals 🌟</h2>
+    <div class="sec-divider green"></div>
+
+    <div class="goal-chips">
+      <div class="goal-chip"><span class="emoji">🎓</span><div class="title">Academic</div><div class="desc">Improve &amp; grow in studies</div></div>
+      <div class="goal-chip"><span class="emoji">💼</span><div class="title">Career</div><div class="desc">Build a fulfilling career</div></div>
+      <div class="goal-chip"><span class="emoji">🌱</span><div class="title">Personal</div><div class="desc">Be more confident</div></div>
+      <div class="goal-chip"><span class="emoji">✈️</span><div class="title">Travel</div><div class="desc">Explore new places</div></div>
+      <div class="goal-chip"><span class="emoji">🌸</span><div class="title">Lifestyle</div><div class="desc">Live peacefully</div></div>
+    </div>
+
+    <div class="vb-label">🎓 Graduating</div>
+    <div class="vb-grid cols-3">
+      <div class="vb-ph"><img src="Content/graduation-day.jpg" alt="Graduation Day" onerror="this.style.display='none'"><span class="icon">🎓</span><span>graduation-day.jpg</span></div>
+      <div class="vb-ph"><img src="Content/diploma.jpg" alt="My Diploma" onerror="this.style.display='none'"><span class="icon">📜</span><span>diploma.jpg</span></div>
+      <div class="vb-ph"><img src="Content/celebration.jpg" alt="Celebration" onerror="this.style.display='none'"><span class="icon">🥳</span><span>celebration.jpg</span></div>
+    </div>
+
+    <div class="vb-label green">✈️ Places I Want to Visit</div>
+    <div class="vb-grid cols-4">
+      <div class="vb-ph green"><img src="Content/place-1.png" alt="Place 1" onerror="this.style.display='none'"><span class="icon">🗺️</span><span>place-1.png</span></div>
+      <div class="vb-ph green"><img src="Content/place-2.jpg" alt="Place 2" onerror="this.style.display='none'"><span class="icon">🗺️</span><span>place-2.jpg</span></div>
+      <div class="vb-ph green"><img src="Content/place-3.jpg" alt="Place 3" onerror="this.style.display='none'"><span class="icon">🗺️</span><span>place-3.jpg</span></div>
+      <div class="vb-ph green"><img src="Content/place-4.png" alt="Place 4" onerror="this.style.display='none'"><span class="icon">🗺️</span><span>place-4.png</span></div>
+    </div>
+
+    <div class="vb-label">🛍️ Things I Want to Have</div>
+    <div class="vb-grid cols-5">
+      <div class="vb-ph"><img src="Content/item-1.jpg" alt="Item 1" onerror="this.style.display='none'"><span class="icon">✨</span><span>item-1.jpg</span></div>
+      <div class="vb-ph"><img src="Content/item-2.jpg" alt="Item 2" onerror="this.style.display='none'"><span class="icon">✨</span><span>item-2.jpg</span></div>
+      <div class="vb-ph"><img src="Content/item-3.jpg" alt="Item 3" onerror="this.style.display='none'"><span class="icon">✨</span><span>item-3.jpg</span></div>
+      <div class="vb-ph"><img src="Content/item-4.jpg" alt="Item 4" onerror="this.style.display='none'"><span class="icon">✨</span><span>item-4.jpg</span></div>
+      <div class="vb-ph"><img src="Content/item-5.jpg" alt="Item 5" onerror="this.style.display='none'"><span class="icon">✨</span><span>item-5.jpg</span></div>
+    </div>
+  </section>
+
+  </div>
+
+  <!--FOOTER-->
+  <div style="background:var(--dark); border-radius:40% 60% 0 0 / 30% 30% 0 0; margin-top:-28px; width:100%; position:relative; box-shadow:0 8px 32px rgba(0,0,0,.08);">
+    <div class="footer-inner">
+      <span class="deco sm" style="top:16px; left:10%;  opacity:.3;">🌸</span>
+      <span class="deco sm" style="top:16px; right:10%; opacity:.3;">✨</span>
+      <span class="deco sm" style="bottom:20px; left:22%; opacity:.25;">🦋</span>
+      <span class="deco sm" style="bottom:20px; right:22%;opacity:.25;">💕</span>
+      <div class="footer-name">"Maica" for short</div>
+      <div class="footer-sub">~ still growing, still glowing ~</div>
+      <div class="footer-decos">🌸 ✨ 🎀 💕 🦋</div>
+    </div>
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>
